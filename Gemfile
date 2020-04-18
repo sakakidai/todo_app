@@ -25,6 +25,7 @@ gem 'banken'
 
 # User Authentication
 gem 'devise'
+gem 'omniauth-twitter'
 
 # paging
 gem 'will_paginate'
@@ -51,6 +52,18 @@ group :development, :test do
   gem 'pry-doc'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
+
+  # Code static code analyzer
+  gem 'rubocop'
+  gem 'rails_best_practices'
+  gem 'bullet'
+  gem 'solargraph'
+
+  # useful error view
+  gem "better_errors"
+
+  # for model column name comment etc
+  gem 'annotate'
 end
 
 group :development do
@@ -65,16 +78,6 @@ group :test do
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
 
-  # Code static code analyzer
-  gem 'rubocop'
-  gem 'rails_best_practices'
-  gem 'bullet'
-
-  # useful error view
-  gem "better_errors"
-
-  # for model column name comment etc
-  gem 'annotate'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
