@@ -3,7 +3,7 @@ class OmniauthCallbacksController < ApplicationController
     @user_login = UserLogin.from_omniauth(request.env["omniauth.auth"].except("extra"))
 
     if @user_login.persisted?
-      sign_in_and_redirect(@userlogin)
+      sign_in_and_redirect(@user_login)
     else
       session["devise.user_login_attributes"] = @user_login.attributes
       redirect_to new_user_login_registration_url

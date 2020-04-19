@@ -36,9 +36,8 @@ class DeviseCreateUserLogins < ActiveRecord::Migration[5.2]
       t.timestamps null: false
     end
 
-    add_index :user_logins, :email,                unique: true
     add_index :user_logins, :reset_password_token, unique: true
-    # add_index :user_logins, :confirmation_token,   unique: true
-    # add_index :user_logins, :unlock_token,         unique: true
+    add_index :user_logins, :confirmation_token,   unique: true
+    add_index :user_logins, :unlock_token,         unique: true
   end
 end
