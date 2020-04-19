@@ -13,6 +13,12 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# template language
+gem "slim-rails"
+
+# form helper
+gem "simple_form"
+
 # Design
 gem 'materialize-sass', '~> 1.0.0'
 gem 'material_icons'
@@ -29,8 +35,7 @@ gem 'omniauth-twitter'
 
 # paging
 gem 'will_paginate'
-gem 'will_paginate-foundation'
-gem 'will_paginate-materialize', git: 'https://github.com/mldoscar/will_paginate-materialize', branch: 'master'
+gem 'will_paginate-materialize', git: 'https://github.com/mldoscar/will_paginate-materialize', branch:'master'
 
 # for enviroment var setting
 gem 'dotenv-rails'
@@ -61,6 +66,7 @@ group :development, :test do
 
   # useful error view
   gem "better_errors"
+  gem 'binding_of_caller'
 
   # for model column name comment etc
   gem 'annotate'
@@ -80,7 +86,6 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
-
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
